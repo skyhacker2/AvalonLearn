@@ -1,0 +1,12 @@
+button {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.ms-tabs {
+    border: 1px solid violet;
+    width: 430px;
+    padding: 5px;
+    height: 200px;
+}

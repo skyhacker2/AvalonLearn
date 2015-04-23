@@ -20,6 +20,9 @@ require.config( {
 });
 
 require(['avalon', 'domReady!'], function() {   // 添加根VM(处理共用部分)
+    avalon.config({
+        debug: true
+    });
     avalon.log('加载avalon完毕，开始构建根vm与加载其他模块');
     avalon.templateCache.empty = " "
     avalon.define( {
@@ -27,13 +30,17 @@ require(['avalon', 'domReady!'], function() {   // 添加根VM(处理共用部�
         header: "这是根消息，用于放置其他模块都共用的东西，比如<b>用户名</b>什么的",
         footer: "页脚消息",
         page: "empty",
-        page2: "empty"
+        page2: "empty",
+        onRendered: function() {
+            alert('alert');
+            avalon.log('onRendered');
+        }
     })
     avalon.scan(document.body)
     // require(['./modules/aaa/aaa'], function() {
 
     // });
-    require(['./modules/eee/eee'], function() {
+    require(['./modules/bbb/bbb'], function() {
         avalon.log('加载其他完毕');
     });
 });

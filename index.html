@@ -11,9 +11,9 @@
         }
     </style>
 </head>
-<body ms-controller="root">
+<body ms-controller="root" class="ms-controller">
     <div>{{header | html}}</div>
-    <div ms-include-src="page"></div>
+    <div ms-include-src="page" ms-include-rendered="onRendered"></div>
     <div ms-include-src='page2'></div>
     <div>{{footer}}</div>
 server

@@ -1,0 +1,20 @@
+<style type="text/css">
+    .last {
+        background: purple;
+    }
+    .first {
+        background-color: violet;
+    }
+</style>
+<div ms-controller="hhh">
+    <ul>
+        <li ms-repeat="array"><a href="#">{{el}} -- {{$index}}</a></li>
+    </ul>
+    <ul>
+        <li ms-repeat="array" ms-class="last:$last" ms-class-1="first:$first" ms-click="$remove">{{el}} -- {{$index}}</li>
+    </ul>
+    <dl ms-each="data">
+        <dt>{{el.text}}</dt>
+        <dd>{{el.value}}</dd>
+    </dl>
+</div>

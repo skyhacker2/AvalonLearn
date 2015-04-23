@@ -1,0 +1,22 @@
+<div ms-controller="iii">
+    <select ms-duplex="selected">
+        <option ms-repeat="options">{{el}}</option>
+    </select>
+    <select ms-duplex="trend">
+        <option value="1">UP</option>
+        <option value="-1">DOWN</option>
+    </select>
+    <table>
+        <tr ms-repeat="data">
+            <td>{{el.name}}</td>
+            <td>{{el.size}}</td>
+            <td>{{el.date}}</td>
+        </tr>
+    </table>
+</div>
+<div ms-controller="iii2">
+    <input ms-duplex="selected"/>
+    <select ms-duplex="selected">
+        <option ms-repeat="array">{{el}}</option>
+    </select>
+</div>
