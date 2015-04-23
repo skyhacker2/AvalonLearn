@@ -1,0 +1,11 @@
+<div ms-controller="ccc">
+    这里比较输出结果: {{object.id != null}}
+    <div ms-visible="object.id != null">
+        这是visible的:
+        <span>{{object.message}}</span>
+    </div>
+    <div ms-if="object.id != null">
+        这是if的:
+        <span>{{object.message}}</span>
+    </div>
+</div>

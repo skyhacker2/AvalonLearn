@@ -1,0 +1,22 @@
+<style type="text/css">
+    button {
+        width: 150px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .ms-tabs {
+        border: 1px solid violet;
+        width: 430px;
+        padding: 5px;
+        height: 200px;
+    }
+</style>
+<div ms-controller="bbb">
+    <button ms-click="toggle(0)">触发器1</button>
+    <button ms-click="toggle(1)">触发器2</button>
+    <button ms-click="toggle(2)">触发器3</button>
+    <div class="ms-tabs" ms-if="currentIndex === 0">切换卡1<br/>其他内容</div>
+    <div class="ms-tabs" ms-if="currentIndex === 1">切换卡2<br/>及Eleven Chen</div>
+    <div class="ms-tabs" ms-if="currentIndex === 2">切换卡3<br/>最后一个了</div>
+</div>
